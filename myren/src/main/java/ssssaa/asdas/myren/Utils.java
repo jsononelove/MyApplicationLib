@@ -32,11 +32,11 @@ public class Utils {
         return asShortBuffer;
     }
 
-    public static Bitmap func (Context context, Bitmap bitmap){
+    public static Bitmap func (Context context, Bitmap bitmap, int empty){
 
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inScaled = false;
-        Bitmap decodeEmpty = BitmapFactory.decodeResource(context.getResources(), R.drawable.empty, options);
+        Bitmap decodeEmpty = BitmapFactory.decodeResource(context.getResources(), empty, options);
         decodeEmpty = decodeEmpty.copy(Bitmap.Config.ARGB_8888, true);
 
 
